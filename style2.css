@@ -1,0 +1,153 @@
+/* --- Estilos Generales y Reseteo --- */
+.body {
+    font-family: Arial, sans-serif; /* Usamos una fuente limpia y común */
+    background-color: #f4f4f4; /* Fondo gris muy claro, similar a la imagen */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Estilos del Encabezado (Header) --- */
+.header {
+    display: flex; /* Usamos Flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los ítems */
+    padding: 10px 20px;
+    background-color: #fff; /* Fondo blanco */
+    border-bottom: 5px solid #0000ff; /* La línea azul distintiva */
+    position: relative; /* Necesario para la línea de borde */
+    /* Agregamos una sombra sutil si se desea, aunque en la imagen no es muy marcada */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+/* Título 'Henry' */
+.header h1 {
+    color: #000; /* Texto negro */
+    font-size: 24px;
+    margin-right: 40px; /* Espacio después de Henry */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Contenedor de los enlaces (Botones) */
+.Botones {
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+/* Estilos de los enlaces de navegación */
+.Botones span a {
+    text-decoration: none; /* Quitamos el subrayado */
+    color: #000; /* Color de texto negro */
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el enlace activo ('Generar Contraseña') */
+/* Aunque no podemos saber qué enlace está activo solo con CSS sin una clase específica, */
+/* asumiremos un estilo para el botón Home como se ve en la imagen: */
+.Botones span:first-child a { 
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* --- Estilos del Separador (Horizontal Rule) --- */
+hr {
+    display: none; /* La línea azul del header ya cumple esta función */
+}
+
+/* --- Estilos del Contenido Principal (Main) --- */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Contenedor de las secciones (article con clase .home) */
+.home {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho del contenido principal */
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar la caja */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el texto dentro del artículo */
+}
+
+/* Título principal del asistente */
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Párrafo de la descripción (Generador de contraseñas...) */
+.home p {
+    background-color: #ffc107; /* Color amarillo */
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block; /* Ajusta el ancho al contenido */
+    margin-bottom: 25px;
+}
+
+/* Contenedor de las preguntas (ol con clase .preguntas) */
+.preguntas {
+    list-style: none; /* Quitamos los números de la lista ordenada */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Alineamos los labels y inputs a la izquierda */
+}
+
+/* Estilos para cada par Label-Input */
+.preguntas label {
+    display: block; /* Cada label ocupa su propia línea */
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.preguntas input[type="number"],
+.preguntas input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+/* Ocultamos los inputs de texto para las preguntas de sí/no y simular los inputs pequeños */
+/* La forma correcta sería usar checkboxes/radio buttons, pero para que se vea como en la imagen, */
+/* usaremos un truco de CSS para hacerlos más pequeños y centrados. */
+.preguntas input[name="caracteresespeciales"],
+.preguntas input[name="caracteresnumeros"],
+.preguntas input[name="caracteresmayusculas"] {
+    width: 50px; /* Ancho pequeño */
+    text-align: center;
+    display: block; /* Ocupa su propia línea */
+    margin-left: auto; /* Centra el input pequeño */
+    margin-right: auto; /* Centra el input pequeño */
+}
+
+/* Estilos del botón Generar Contraseña */
+.home div:last-child button {
+    background-color: #212529; /* Negro */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.home div:last-child button:hover {
+    background-color: #343a40; /* Un gris oscuro al pasar el ratón */
+}
